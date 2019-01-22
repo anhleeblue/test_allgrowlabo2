@@ -116,6 +116,7 @@ nav {
         position: absolute;
         width: 100%;
         top: 0;
+        left:0;
         background: #f9f4f0;
         height: 100%;
         padding-top: 30px;
@@ -138,9 +139,11 @@ nav {
         }
     }
 
-    ul {
+    .wrap_social {
         @include clearFix();
-        display: inline-block;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     li {
@@ -155,8 +158,9 @@ nav {
     }
 
     .nav_img {
-        margin-right: 15px;
-
+        &:nth-child(2){
+            margin:0 15px;
+        }
         @include mQ() {
             float: left;
         }
@@ -193,7 +197,7 @@ nav {
 }
 // END NAV
 
-//text,label content 1 + 2 +3
+//text,label button content 1 + 2 +3
 h2{
     font-family: $mincho;
     font-weight: 600;
@@ -243,6 +247,7 @@ button{
     background-color:$br;
     color: white;
     height: 32px;
+    line-height: 32px;
     width: 216px;
     border: 2px solid $br;
     margin-top:42px;
