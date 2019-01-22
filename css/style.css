@@ -1,0 +1,399 @@
+@charset "UTF-8";
+.wrap {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (max-width: 767px) {
+    .wrap {
+      width: 80%; } }
+
+body {
+  font-family: 'Muli', sans-serif;
+  min-width: 1000px; }
+  @media screen and (max-width: 767px) {
+    body {
+      min-width: 0; } }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(../img/header_sweets.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-width: 1000px; }
+  @media screen and (max-width: 767px) {
+    header {
+      min-width: 0; } }
+  header img {
+    width: 100%; }
+  header .social_pc {
+    width: 36px;
+    height: 36px; }
+  header .logo {
+    width: 140px;
+    height: 165px; }
+    @media screen and (max-width: 767px) {
+      header .logo {
+        height: 130px;
+        width: 110px;
+        cursor: pointer; } }
+  header .menu_sp {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      header .menu_sp {
+        display: block;
+        cursor: pointer;
+        float: right;
+        width: 30px;
+        height: 24px;
+        position: absolute;
+        top: 30px;
+        right: 30px; } }
+
+nav {
+  margin-top: 78px;
+  text-align: center;
+  margin-bottom: 111px; }
+  @media screen and (max-width: 767px) {
+    nav {
+      margin-top: 0px;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      background: #f9f4f0;
+      height: 100%;
+      padding-top: 30px;
+      display: none; } }
+  nav a {
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 36px; }
+    @media screen and (max-width: 767px) {
+      nav a {
+        font-size: 18px;
+        color: #642200;
+        font-weight: normal; } }
+  nav ul {
+    display: inline-block; }
+    nav ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+  nav li {
+    float: left;
+    margin-right: 50px; }
+    @media screen and (max-width: 767px) {
+      nav li {
+        float: none;
+        margin-right: 0;
+        margin-top: 15px; } }
+  nav .nav_img {
+    margin-right: 15px; }
+    @media screen and (max-width: 767px) {
+      nav .nav_img {
+        float: left; } }
+  @media screen and (max-width: 767px) {
+    nav .social_pc {
+      display: none; } }
+  nav .social_sp {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      nav .social_sp {
+        display: block;
+        width: 39px; } }
+  nav .menu_sp_close {
+    height: 23px;
+    width: 23px;
+    display: none; }
+    @media screen and (max-width: 767px) {
+      nav .menu_sp_close {
+        margin: 0 35px 0 auto;
+        background-color: #f9f4f0;
+        cursor: pointer; } }
+
+h2 {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  color: #642200; }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 20px; } }
+
+.mini_label {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #642200;
+  margin: 20px auto 50px auto; }
+  @media screen and (max-width: 767px) {
+    .mini_label {
+      margin: 22px auto 45px auto;
+      font-size: 11px; } }
+
+.label {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  color: #642200;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 767px) {
+    .label {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 15px; } }
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  color: black; }
+  @media screen and (max-width: 767px) {
+    .text {
+      font-size: 12px; } }
+
+button {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  background-color: #642200;
+  color: white;
+  height: 32px;
+  width: 216px;
+  border: 2px solid #642200;
+  margin-top: 42px;
+  padding: 0;
+  margin-bottom: 70px;
+  cursor: pointer; }
+  button:hover {
+    background-color: white;
+    color: #642200; }
+  @media screen and (max-width: 767px) {
+    button {
+      font-size: 15px;
+      width: 100%;
+      margin-top: 22px;
+      margin-bottom: 60px; }
+      button:hover {
+        background-color: #642200;
+        color: white; } }
+
+#content1 {
+  background-color: white;
+  padding-top: 90px; }
+  @media screen and (max-width: 767px) {
+    #content1 {
+      padding-top: 60px; } }
+  #content1 .left_p {
+    width: 650px;
+    float: left;
+    line-height: 2; }
+    @media screen and (max-width: 767px) {
+      #content1 .left_p {
+        width: 100%;
+        float: none; } }
+  #content1 .right_img {
+    width: 300px;
+    float: right; }
+    @media screen and (max-width: 767px) {
+      #content1 .right_img {
+        float: none;
+        width: 40%;
+        margin: 0 auto;
+        display: block; } }
+  #content1 .left_img {
+    width: 300px;
+    float: left; }
+    @media screen and (max-width: 767px) {
+      #content1 .left_img {
+        width: 40%;
+        float: none;
+        display: block;
+        margin: 0 auto; } }
+  #content1 .right_p {
+    width: 650px;
+    float: right;
+    line-height: 2; }
+    @media screen and (max-width: 767px) {
+      #content1 .right_p {
+        float: none;
+        width: 100%; } }
+  #content1 .container:after {
+    content: "";
+    display: block;
+    clear: both; }
+  #content1 .container:nth-child(1) {
+    border-bottom: 1px solid #cccccc; }
+  #content1 .mg_container_2 {
+    margin-top: 70px; }
+
+#content2 {
+  background-color: #fbfbfb;
+  padding-top: 90px; }
+  @media screen and (max-width: 767px) {
+    #content2 {
+      padding-top: 60px; } }
+  #content2 img {
+    width: 100%;
+    border-radius: 8px;
+    height: 500px; }
+    @media screen and (max-width: 767px) {
+      #content2 img {
+        height: auto; } }
+  #content2 .padding_text {
+    padding: 46px 80px 80px 80px; }
+    @media screen and (max-width: 767px) {
+      #content2 .padding_text {
+        padding: 0 0 60px 0; } }
+  #content2 .label {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #642200; }
+    @media screen and (max-width: 767px) {
+      #content2 .label {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 15px; } }
+  #content2 .text {
+    line-height: 2; }
+  #content2 .margin_text {
+    margin-top: 35px; }
+    @media screen and (max-width: 767px) {
+      #content2 .margin_text {
+        margin-top: 37px; } }
+
+#content3 {
+  padding: 90px 0; }
+  @media screen and (max-width: 767px) {
+    #content3 {
+      padding: 60px 0; } }
+  #content3 img {
+    width: 52px;
+    margin: 0 auto;
+    display: block; }
+  #content3 .box {
+    width: 282px;
+    float: left;
+    border: 1px solid #cccccc;
+    padding: 34px 18px; }
+    #content3 .box:nth-child(2) {
+      margin: 0 20px; }
+    @media screen and (max-width: 767px) {
+      #content3 .box {
+        width: 100%;
+        float: none;
+        padding: 35px 0; }
+        #content3 .box:nth-child(2) {
+          margin: 25px 0; } }
+  #content3 .label_content3 {
+    color: #642200;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #d0d0d0; }
+    @media screen and (max-width: 767px) {
+      #content3 .label_content3 {
+        margin-left: 18px;
+        margin-right: 18px; } }
+  #content3 .text {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2; }
+    @media screen and (max-width: 767px) {
+      #content3 .text {
+        margin: 0 18px; } }
+  #content3 .container_box:after {
+    content: "";
+    display: block;
+    clear: both; }
+  #content3 button {
+    margin: 50px auto 0 auto;
+    display: block; }
+    @media screen and (max-width: 767px) {
+      #content3 button {
+        width: 100%;
+        margin: 30px 0 60px 0; } }
+
+footer {
+  background-image: url(../img/footer_about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500;
+  padding: 70px 0 90px 0; }
+  @media screen and (max-width: 767px) {
+    footer {
+      padding: 50px 0 60px 0;
+      font-size: 10px; } }
+  footer .logo {
+    height: 84px;
+    width: 70px;
+    display: inline-block; }
+    @media screen and (max-width: 767px) {
+      footer .logo {
+        height: 72px;
+        width: 60px; } }
+  footer .copyright {
+    font-size: 12px; }
+    @media screen and (max-width: 767px) {
+      footer .copyright {
+        font-size: 10px; } }
+  footer .hr {
+    width: 230px;
+    display: inline-block;
+    border: 1px solid white; }
+    @media screen and (max-width: 767px) {
+      footer .hr {
+        width: 35%; } }
+  footer .hr_top {
+    margin: 30px 0 40px 0; }
+    @media screen and (max-width: 767px) {
+      footer .hr_top {
+        margin: 35px 0 25px 0; } }
+  footer .hr_bot {
+    margin: 40px 0 30px 0; }
+    @media screen and (max-width: 767px) {
+      footer .hr_bot {
+        margin: 25px 0 35px 0; } }
+  footer ul {
+    display: inline-block;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 767px) {
+      footer ul {
+        margin-bottom: 35px; } }
+  footer li {
+    float: left;
+    margin-right: 15px; }
+  footer .line_height {
+    line-height: 2; }
+  footer img {
+    width: 100%; }
+  footer .ft_icon {
+    width: 34px; }
+
+.pd_header {
+  margin: 0;
+  background: #f9f4f0; }
+
+.nav_display {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */

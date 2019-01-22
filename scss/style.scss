@@ -1,0 +1,540 @@
+//CLEAR FLOAT
+@mixin clearFix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//BREAKPOINT
+@mixin mQ {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+//COLOR
+$br:#642200;
+
+//FONT
+$gothic:"游ゴシック",
+YuGothic,
+"ヒラギノ角ゴ Pro",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+"Meiryo",
+sans-serif;
+$mincho: "游明朝",
+YuMincho,
+"ヒラギノ明朝 ProN W3",
+"Hiragino Mincho ProN",
+"HG明朝E",
+"ＭＳ Ｐ明朝",
+serif;
+
+.wrap {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include mQ {
+        width: 80%;
+    }
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    min-width: 1000px;
+
+    @include mQ {
+        min-width: 0;
+    }
+}
+
+// HEADER
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url(../img/header_sweets.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    min-width: 1000px;
+    @include mQ {
+        min-width: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+    .social_pc{
+        width: 36px;
+        height: 36px;
+    }
+    .logo {
+        width: 140px;
+        height: 165px;
+
+        @include mQ() {
+            height: 130px;
+            width: 110px;
+            cursor: pointer;
+        }
+    }
+
+    .menu_sp {
+        display: none;
+
+        @include mQ {
+            display: block;
+            cursor: pointer;
+            float: right;
+            width: 30px;
+            height: 24px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+}
+// END HEADER
+
+// NAV
+nav {
+    margin-top: 78px;
+    text-align: center;
+    margin-bottom: 111px;
+    @include mQ {
+        margin-top: 0px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background: #f9f4f0;
+        height: 100%;
+        padding-top: 30px;
+        display: none;
+    }
+
+    a {
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 4px;
+        word-spacing: 10px;
+        color: white;
+        font-weight: bold;
+        line-height: 36px;
+
+        @include mQ {
+            font-size: 18px;
+            color: $br;
+            font-weight: normal;
+        }
+    }
+
+    ul {
+        @include clearFix();
+        display: inline-block;
+    }
+
+    li {
+        float: left;
+        margin-right: 50px;
+
+        @include mQ {
+            float: none;
+            margin-right: 0;
+            margin-top: 15px;
+        }
+    }
+
+    .nav_img {
+        margin-right: 15px;
+
+        @include mQ() {
+            float: left;
+        }
+    }
+
+    .social_pc {
+        @include mQ {
+            display: none;
+        }
+    }
+
+    .social_sp {
+        display: none;
+
+        @include mQ {
+            display: block;
+            width: 39px;
+        }
+    }
+
+    .menu_sp_close {
+        height: 23px;
+        width: 23px;
+        display: none;
+
+        @include mQ {
+
+            margin: 0 35px 0 auto;
+            background-color: #f9f4f0;
+            cursor: pointer;
+
+        }
+    }
+}
+// END NAV
+
+//text,label content 1 + 2 +3
+h2{
+    font-family: $mincho;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color:$br;
+    @include mQ{
+        font-size: 20px;
+    }
+}
+.mini_label{
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color:$br;
+    margin:20px auto 50px auto;
+    @include mQ{
+        margin: 22px auto 45px auto;
+        font-size: 11px;
+    }
+}
+.label{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $gothic;
+    color:$br;
+    margin-bottom: 30px;
+    @include mQ{
+        margin-top:30px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+.text{
+    font-weight: 500;
+    font-size: 14px;
+    font-family: $gothic;
+    color:black;
+    @include mQ{
+        font-size: 12px;
+    }
+}
+button{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $gothic;
+    background-color:$br;
+    color: white;
+    height: 32px;
+    width: 216px;
+    border: 2px solid $br;
+    margin-top:42px;
+    padding: 0;
+    margin-bottom: 70px;
+    cursor: pointer;
+    &:hover{
+        background-color:white; 
+        color: $br;
+    }
+    @include mQ(){
+        font-size: 15px;
+        width: 100%;
+        margin-top: 22px;
+        margin-bottom: 60px;
+        &:hover{
+            background-color:$br;
+            color: white;
+        }
+    }
+}
+// CONTENT 1
+#content1 {
+    background-color:white;
+    padding-top: 90px;
+    @include mQ{
+        padding-top:60px;
+    }
+    .left_p{
+        width:650px;
+        float:left;
+        line-height: 2;
+        @include mQ{
+            width: 100%;
+            float: none;
+        }
+       
+    }
+    .right_img{
+        width: 300px;
+        float:right;
+        @include mQ{
+            float:none;
+            width: 40%;
+            margin:0 auto;
+            display: block;
+        }
+    }
+    .left_img{
+        width: 300px;
+        float: left;
+        @include mQ(){
+            width: 40%;
+            float: none;
+            display: block;
+            margin:0 auto;
+        }
+    }
+    .right_p{
+        width: 650px;
+        float: right;
+        line-height: 2;
+        @include mQ{
+            float:none;
+            width: 100%;
+        }
+    }
+    .container{
+        @include clearFix();
+        &:nth-child(1){
+            border-bottom: 1px solid #cccccc;
+        }
+    }
+    .mg_container_2{
+        margin-top:70px;
+    }
+
+    
+}
+//END CONTENT 1
+
+// CONTENT 2
+#content2 {
+    background-color:#fbfbfb; 
+    padding-top: 90px;
+    @include mQ{
+        padding-top:60px;
+    }
+    img{
+        width: 100%;
+        border-radius: 8px;
+        height: 500px;
+        @include mQ{
+            height:auto;
+        }
+      
+    }
+    .padding_text{
+        padding: 46px 80px 80px 80px;
+        @include mQ{
+            padding: 0 0 60px 0;
+        }
+    }
+    .label{    
+    padding-bottom: 15px;
+    border-bottom: 1px dashed $br;
+    @include mQ{
+        margin-top:30px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    }
+    .text{
+        line-height: 2;
+    }
+    .margin_text{
+        margin-top:35px;
+        @include mQ{
+            margin-top: 37px;
+        }
+    } 
+
+}
+// END CONTENT 2
+
+// CONTENT 3
+#content3 {
+    padding: 90px 0;
+    
+    @include mQ{
+        padding:60px 0;
+    }
+    
+    img{
+        width: 52px;
+        margin:0 auto;
+        display: block;
+    }
+    .box{
+        width: 282px;
+        float:left;
+        border:1px solid #cccccc;
+        padding:34px 18px;
+        &:nth-child(2){
+            margin:0 20px;
+        }
+        @include mQ{
+            width: 100%;
+            float:none;
+            padding: 35px 0;
+            &:nth-child(2){
+                margin:25px 0;
+            }
+        }
+       
+    }
+    .label_content3{
+        color:$br;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: $gothic;
+        margin-top :35px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #d0d0d0;
+        @include mQ{
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+
+    }
+    .text{
+        font-family: $gothic;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2;
+        @include mQ{
+            margin:0 18px;
+        }
+    }
+    .container_box{
+        @include clearFix();
+    }
+    button{
+        margin: 50px auto 0 auto;
+        display: block;
+        @include mQ{
+            width: 100%;
+            margin:30px 0 60px 0;
+        }
+    }
+
+}
+// END CONTENT 3
+
+// FOOTER
+footer {
+    background-image: url(../img/footer_about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: $gothic;
+    font-weight: 500;
+    padding: 70px 0 90px 0;
+
+    @include mQ {
+        padding: 50px 0 60px 0;
+        font-size: 10px
+    }
+
+    .logo {
+        height: 84px;
+        width: 70px;
+        display: inline-block;
+
+        @include mQ {
+            height: 72px;
+            width: 60px;
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+
+        @include mQ {
+            font-size: 10px;
+        }
+    }
+
+    .hr {
+        width: 230px;
+        display: inline-block;
+        border: 1px solid white;
+
+        @include mQ {
+            width: 35%;
+        }
+    }
+
+    .hr_top {
+        margin: 30px 0 40px 0;
+
+        @include mQ {
+            margin: 35px 0 25px 0;
+        }
+    }
+
+    .hr_bot {
+        margin: 40px 0 30px 0;
+
+        @include mQ {
+            margin: 25px 0 35px 0;
+        }
+
+    }
+
+    ul {
+        display: inline-block;
+        margin-bottom: 30px;
+
+        @include mQ {
+            margin-bottom: 35px;
+        }
+    }
+
+    li {
+        float: left;
+        margin-right: 15px;
+
+    }
+
+    .line_height {
+        line-height: 2;
+    }
+
+    img {
+        width: 100%;
+    }
+    .ft_icon{
+        width: 34px;
+    }
+}
+// END FOOTER
+//Class menu mobile
+.pd_header {
+    margin: 0;
+    background: #f9f4f0;
+}
+
+.nav_display {
+    display: block;
+}
